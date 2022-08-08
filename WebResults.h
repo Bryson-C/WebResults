@@ -51,10 +51,10 @@ inline void WriteWebResults(WebResults* results, const char* path) {
     const char* langGen = "C";
 #endif
     char generationDataBuffer[512];
-    sprintf(generationDataBuffer, "<h2> Generated With %s </h2>", langGen);
+    sprintf(generationDataBuffer, "<h2> Generated With %s </h2>\n", langGen);
 
 
-    const char* boilerPlateEnd = "</body>\n"
+    const char* boilerPlateEnd = "\n</body>\n"
                                  "</html>";
 
     fputs(boilerPlateStart, file);
@@ -69,7 +69,7 @@ inline void WriteWebResults(WebResults* results, const char* path) {
         printf("(%zi/%zi) Got: %s\n", i+1, results->currentIndex, buffer);
     }
 
-    fputs("</div>", file);
+    fputs("</div>\n", file);
     fputs(boilerPlateEnd, file);
     fclose(file);
 }

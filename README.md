@@ -35,4 +35,4 @@ int main() {
 ```
 
 ### Output
-[Generated Website](https://github.com/Bryson-C/WebResults/blob/main/Results.png)
+![Generated Website](https://github.com/Bryson-C/WebResults/blob/main/Results.png)

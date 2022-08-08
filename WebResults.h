@@ -66,7 +66,7 @@ inline void WriteWebResults(WebResults* results, const char* path) {
         char buffer[512];
         sprintf(buffer, "<h3> &emsp; %s </h3>\n", (*results).elements[i].buffer);
         fputs(buffer, file);
-        printf("(%zi/%zi) Got: %s\n", i, results->currentIndex, buffer);
+        printf("(%zi/%zi) Got: %s\n", i+1, results->currentIndex, buffer);
     }
 
     fputs("</div>", file);
